@@ -1,0 +1,582 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8" />
+<link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+<link rel="icon" type="image/png" href="../assets/img/favicon.png">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<title>
+Webtunix Attendance System
+</title>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+<link href="../assets/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
+<link href="../assets/demo/demo.css" rel="stylesheet" />
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div class="wrapper ">
+<!------------------------------------------------------------------SIDEBAR START HERE-------------------------------------------------------------------->
+ <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
+      <div class="logo">
+        <a href="" class="simple-text logo-normal">
+         <img src="../assets/img/logo.png">
+        </a>
+      </div>
+      <div class="sidebar-wrapper">
+        <ul class="nav">
+          <li class="nav-item active  ">
+            <a class="nav-link" href="./dashboard.html">
+              <i class="material-icons">dashboard</i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./employee-dashboard.html">
+              <p><i class="fa fa-tachometer"></i>Employee Dashboard</p>
+            </a>
+          </li>
+         <li class="nav-item ">
+            <a class="nav-link" href="./user.html">
+              <i class="material-icons">content_paste</i>
+              <p>Users</p>
+            </a>
+          </li>
+           <li class="nav-item ">
+            <a class="nav-link" href="./all-project.html">
+              <p><i class="fa fa-rocket"></i>Project</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="./profile.html">
+              <i class="material-icons">person</i>
+              <p>My Profile</p>
+            </a>
+          </li>
+           <li class="nav-item">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false"><i class="fa fa-users"></i>Employee</a>
+        <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="./all-employee.html">All Employee</a>
+          <a class="dropdown-item" href="./departments.html">Departments</a>
+          <a class="dropdown-item" href="./designation.html">Designations</a>
+          <a class="dropdown-item" href="./attendance-admin.html">Attendance [Admin]</a>
+          <a class="dropdown-item" href="./holidays.html">Holidays</a>
+          <a class="dropdown-item" href="./leave-admin.html">Leaves(Admin)</a>
+  <a class="dropdown-item" href="./leave-employee.html">Leaves(employee)</a>
+  <a class="dropdown-item" href="./leave-setting.html">Leave Settings</a>
+    <a class="dropdown-item" href="./overtime.html">Overtime</a>
+     <a class="dropdown-item" href="./termination.html">Termination</a>
+      <a class="dropdown-item" href="./permotion.html">Promotion</a>
+       <a class="dropdown-item" href="./permotion.html">Resignation</a>
+        <a class="dropdown-item" href="./timesheet.html">Timesheet</a>
+         <a class="dropdown-item" href="./attendance-employee.html">attendance [Employee]</a>
+        </div>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false"><i class="fa fa-file-o"></i>Pages</a>
+        <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+           <a class="dropdown-item" href="./login.html">Login</a>
+         <a class="dropdown-item" href="./forgot-password.html">Forgot Password</a>
+           <a class="dropdown-item" href="./otp.html">OTP</a>
+            <a class="dropdown-item" href="./lock-screen.html">Lock Screen</a> 
+               <a class="dropdown-item" href="./error-404.html">404 Error</a>   
+                 <a class="dropdown-item" href="./error-500.html">500 Error</a>
+                  <a class="dropdown-item" href="./faq.html">FAQ</a>   
+                     <a class="dropdown-item" href="./terms&condition.html">Terms & Condition</a>   
+                       <a class="dropdown-item" href="./privacy-policy.html">Privacy Policy</a>          
+        </div>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false"><i class="fa fa-money"></i>Payroll</a>
+        <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+           <a class="dropdown-item" href="./employee-salary.html">Employee Salary</a>
+          <a class="dropdown-item" href="./payslip.html">Payslip</a> 
+           <a class="dropdown-item" href="./payroll-item.html">Payroll Items</a>       
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false"><i class="fa fa-building"></i>Recruitment</a>
+        <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+           <a class="dropdown-item" href="./jobs.html">Manage Jobs</a>
+          <a class="dropdown-item" href="./applied-candidates.html">Applied Candidates</a>     
+        </div>
+      </li>
+       <li class="nav-item">
+            <a class="nav-link" href="./setting.html">
+              <p><i class="fa fa-cog"></i>Setting</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+<!-------------------------------------------------------------------------SIDEBAR CLOSED HERE------------------------------------------------------------->
+<div class="main-panel">
+<!---------------------------------------------------------------------TOP NAV START HERE---------------------------------------------------------------->
+<nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+<div class="container-fluid">
+<!-- <div class="navbar-wrapper">
+<a class="navbar-brand" href="#pablo">Leave Admin</a>
+</div> -->
+<button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+<span class="sr-only">Toggle navigation</span>
+<span class="navbar-toggler-icon icon-bar"></span>
+<span class="navbar-toggler-icon icon-bar"></span>
+<span class="navbar-toggler-icon icon-bar"></span>
+</button>
+<div class="collapse navbar-collapse justify-content-end">
+<form class="navbar-form">
+<div class="input-group no-border">
+<input type="text" value="" class="form-control" placeholder="Search...">
+<button type="submit" class="btn btn-white btn-round btn-just-icon">
+<i class="material-icons">search</i>
+<div class="ripple-container"></div>
+</button>
+</div>
+</form>
+<ul class="navbar-nav">
+<li class="nav-item">
+<a class="nav-link" href="#pablo">
+<i class="material-icons">dashboard</i>
+<p class="d-lg-none d-md-block">
+Stats
+</p>
+</a>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<i class="material-icons">notifications</i>
+<span class="notification">5</span>
+<p class="d-lg-none d-md-block">
+Some Actions
+</p>
+</a>
+<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+<a class="dropdown-item" href="#">Mike John responded to your email</a>
+<a class="dropdown-item" href="#">You have 5 new tasks</a>
+<a class="dropdown-item" href="#">You're now friend with Andrew</a>
+<a class="dropdown-item" href="#">Another Notification</a>
+<a class="dropdown-item" href="#">Another One</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link" href="#pablo" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<i class="material-icons">person</i>
+<p class="d-lg-none d-md-block">
+Account
+</p>
+</a>
+<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
+<a class="dropdown-item" href="profile.html">My Profile</a>
+<a class="dropdown-item" href="#">Settings</a>
+<div class="dropdown-divider"></div>
+<a class="dropdown-item" href="#">Log out</a>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<!--------------------------------------------------------------------------TOP NAV CLOSED HERE--------------------------------------------------- -->
+
+<div class="content">
+<div class="container-fluid">
+<div class="row mb-5">
+<div class="col-md-12 mb-3">
+<h3 class="float-left mt-0"><strong>Attendance</strong></h3>
+</div>
+
+<div class="col-md-4">
+  <div class="wrap-attandance">
+    <h5>Timesheet <span>11 Mar 2019</span></h5>
+     <div class="timeset-section">
+    <p>Punch In at<br><span>Wed, 11th Mar 2019 10.00 AM</span></p>
+  </div>
+  <div class="center-section mb-4">
+    <p>3.45 hrs</p>
+  </div>
+  <button>Punch Out</button>
+  <div class="row text-center mb-3">
+    <div class="col-md-6">
+   <div class="left-wrap">
+    <p class="mt-2">Break<br>1.21 hrs</p>
+   </div>
+    </div>
+     <div class="col-md-6">
+   <div class="left-wrap">
+    <p class="mt-2">Break<br>1.21 hrs</p>
+   </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+<div class="col-md-4">
+  <div class="wrap-attandance">
+    <h5>Statistics</h5>
+     <div class="statistics-section mb-4">
+      <div class="time-shedule mb-4">
+      <p class="float-left">Today</p>
+      <p class="float-right">3.45/Hours</p>
+    </div>
+   <div class="progress progress-striped">
+    <div class="progress-bar">
+    </div>                       
+  </div> 
+  </div>
+
+   <div class="second-statistics-section mb-4">
+      <div class="time-shedule mb-4">
+      <p class="float-left">This Week</p>
+      <p class="float-right">3.45/Hours</p>
+    </div>
+   <div class="progress progress-striped">
+    <div class="progress-bar">
+    </div>                       
+  </div> 
+  </div>
+
+   <div class="third-statistics-section mb-4">
+      <div class="time-shedule mb-4">
+      <p class="float-left">This Month</p>
+      <p class="float-right">3.45/Hours</p>
+    </div>
+   <div class="progress progress-striped">
+    <div class="progress-bar">
+    </div>                       
+  </div> 
+  </div>
+
+   <div class="forth-statistics-section mb-4">
+      <div class="time-shedule mb-4">
+      <p class="float-left">Remaining</p>
+      <p class="float-right">3.45/Hours</p>
+    </div>
+   <div class="progress progress-striped">
+    <div class="progress-bar">
+    </div>                       
+  </div> 
+  </div>
+
+
+   <div class="fifth-statistics-section mb-4">
+      <div class="time-shedule mb-4">
+      <p class="float-left">Overtime</p>
+      <p class="float-right">3.45/Hours</p>
+    </div>
+   <div class="progress progress-striped">
+    <div class="progress-bar">
+    </div>                       
+  </div> 
+  </div>
+  </div>
+</div>
+
+
+<div class="col-md-4">
+  <div class="wrap-attandance">
+     <h5>Today Activity</h5>
+     <ul class="list-group vertical-steps">
+  <li class="list-group-item"><p>Punch In at</p><span><i class="fa fa-clock-o pr-1"></i>10.00 AM.</span></li>
+  <li class="list-group-item"><p>Punch In Out</p><span><i class="fa fa-clock-o pr-1"></i>01.45 AM.</span></li>
+  <li class="list-group-item"><p>Punch In at</p><span><i class="fa fa-clock-o pr-1"></i>10.00 AM.</span></li>
+  <li class="list-group-item"><p>Punch In at</p><span><i class="fa fa-clock-o pr-1"></i>10.00 AM.</span></li>
+  <li class="list-group-item"><p>Punch In Out</p><span><i class="fa fa-clock-o pr-1"></i>01.45 AM.</span></li>
+  <li class="list-group-item"><p>Punch In at</p><span><i class="fa fa-clock-o pr-1"></i>10.00 AM.</span></li>
+</ul>
+  </div>
+</div>
+</div>
+
+
+ <div class="row">
+      <div class="col-md-3">
+        <div class="attendance-employee-section">
+          <div class="md-form mt-0">
+   <input class="datepicker" id="addpromotionmodel" width="376" />
+    <script>
+        $('#addpromotionmodel').datepicker({ footer: true, modal: true });
+    </script>
+</div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="attendance-section">
+           <select class="selectbox mb-5 mdb-select md-form md-outline colorful-select dropdown-primary">
+      <option value="" disabled selected>Select Month</option>
+      <option value="1">Jan</option>
+      <option value="2">Feb</option>
+      <option value="3">March</option>
+      <option value="4">April</option>
+      <option value="5">May</option>
+      <option value="6">Jun</option>
+    </select>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="attendance-section">
+      <select class="selectbox mb-5 mdb-select md-form md-outline colorful-select dropdown-primary">
+      <option value="" disabled selected>Select Year</option>
+      <option value="1">2015</option>
+      <option value="2">2016</option>
+      <option value="3">2017</option>
+      <option value="4">2018</option>
+      <option value="5">2019</option>
+      <option value="6">2020</option>
+    </select>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <button class="search-btn mb-5">Search</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="timetable">
+        <div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Date </th>
+        <th scope="col">Punch In</th>
+        <th scope="col">Punch Out</th>
+        <th scope="col">Production</th>
+        <th scope="col">Break</th>
+        <th scope="col"> Overtime</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>19 Feb 2019</td>
+        <td>10 AM</td>
+        <td>7 PM</td>
+        <td>9 hrs</td>
+        <td>1 hrs</td>
+        <td>0</td>
+      </tr>
+        <tr>
+        <th scope="row">2</th>
+        <td>19 Feb 2019</td>
+        <td>10 AM</td>
+        <td>7 PM</td>
+        <td>9 hrs</td>
+        <td>1 hrs</td>
+        <td>0</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+      </div>
+    </div>
+    </div>
+</div>
+</div><!----------------------------------------------------------------------------CONTENT DIV CLOSE HERE--------------------------------->
+</div><!-------------------------------------------------------------------------MAIN DIV CLOSE HERE-------------------------------------->
+</div><!-----------------------------------------------------------------------WRAPPER DIV CLOSE HERE---------------------------------------------------->
+
+<!--   Core JS Files   -->
+<script src="../assets/js/core/jquery.min.js"></script>
+<script src="../assets/js/core/popper.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="../assets/js/core/bootstrap-material-design.min.js"></script>
+<script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+<script src="../assets/js/plugins/moment.min.js"></script>
+<script src="../assets/js/plugins/jquery.validate.min.js"></script>
+<script src="../assets/js/plugins/jquery.bootstrap-wizard.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+<script src="../assets/js/plugins/arrive.min.js"></script>
+<script src="../assets/js/material-dashboard.js?v=2.1.1" type="text/javascript"></script>
+<script src="../assets/demo/demo.js"></script>
+<script>
+$(document).ready(function() {
+$().ready(function() {
+$sidebar = $('.sidebar');
+
+$sidebar_img_container = $sidebar.find('.sidebar-background');
+
+$full_page = $('.full-page');
+
+$sidebar_responsive = $('body > .navbar-collapse');
+
+window_width = $(window).width();
+
+fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
+
+if (window_width > 767 && fixed_plugin_open == 'Dashboard') {
+if ($('.fixed-plugin .dropdown').hasClass('show-dropdown')) {
+$('.fixed-plugin .dropdown').addClass('open');
+}
+
+}
+
+$('.fixed-plugin a').click(function(event) {
+// Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
+if ($(this).hasClass('switch-trigger')) {
+if (event.stopPropagation) {
+event.stopPropagation();
+} else if (window.event) {
+window.event.cancelBubble = true;
+}
+}
+});
+
+$('.fixed-plugin .active-color span').click(function() {
+$full_page_background = $('.full-page-background');
+
+$(this).siblings().removeClass('active');
+$(this).addClass('active');
+
+var new_color = $(this).data('color');
+
+if ($sidebar.length != 0) {
+$sidebar.attr('data-color', new_color);
+}
+
+if ($full_page.length != 0) {
+$full_page.attr('filter-color', new_color);
+}
+
+if ($sidebar_responsive.length != 0) {
+$sidebar_responsive.attr('data-color', new_color);
+}
+});
+
+$('.fixed-plugin .background-color .badge').click(function() {
+$(this).siblings().removeClass('active');
+$(this).addClass('active');
+
+var new_color = $(this).data('background-color');
+
+if ($sidebar.length != 0) {
+$sidebar.attr('data-background-color', new_color);
+}
+});
+
+$('.fixed-plugin .img-holder').click(function() {
+$full_page_background = $('.full-page-background');
+
+$(this).parent('li').siblings().removeClass('active');
+$(this).parent('li').addClass('active');
+
+
+var new_image = $(this).find("img").attr('src');
+
+if ($sidebar_img_container.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
+$sidebar_img_container.fadeOut('fast', function() {
+$sidebar_img_container.css('background-image', 'url("' + new_image + '")');
+$sidebar_img_container.fadeIn('fast');
+});
+}
+
+if ($full_page_background.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
+var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+$full_page_background.fadeOut('fast', function() {
+$full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
+$full_page_background.fadeIn('fast');
+});
+}
+
+if ($('.switch-sidebar-image input:checked').length == 0) {
+var new_image = $('.fixed-plugin li.active .img-holder').find("img").attr('src');
+var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+$sidebar_img_container.css('background-image', 'url("' + new_image + '")');
+$full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
+}
+
+if ($sidebar_responsive.length != 0) {
+$sidebar_responsive.css('background-image', 'url("' + new_image + '")');
+}
+});
+
+$('.switch-sidebar-image input').change(function() {
+$full_page_background = $('.full-page-background');
+
+$input = $(this);
+
+if ($input.is(':checked')) {
+if ($sidebar_img_container.length != 0) {
+$sidebar_img_container.fadeIn('fast');
+$sidebar.attr('data-image', '#');
+}
+
+if ($full_page_background.length != 0) {
+$full_page_background.fadeIn('fast');
+$full_page.attr('data-image', '#');
+}
+
+background_image = true;
+} else {
+if ($sidebar_img_container.length != 0) {
+$sidebar.removeAttr('data-image');
+$sidebar_img_container.fadeOut('fast');
+}
+
+if ($full_page_background.length != 0) {
+$full_page.removeAttr('data-image', '#');
+$full_page_background.fadeOut('fast');
+}
+
+background_image = false;
+}
+});
+
+$('.switch-sidebar-mini input').change(function() {
+$body = $('body');
+
+$input = $(this);
+
+if (md.misc.sidebar_mini_active == true) {
+$('body').removeClass('sidebar-mini');
+md.misc.sidebar_mini_active = false;
+
+$('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar();
+
+} else {
+
+$('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar('destroy');
+
+setTimeout(function() {
+$('body').addClass('sidebar-mini');
+
+md.misc.sidebar_mini_active = true;
+}, 300);
+}
+
+// we simulate the window Resize so the charts will get updated in realtime.
+var simulateWindowResize = setInterval(function() {
+window.dispatchEvent(new Event('resize'));
+}, 180);
+
+// we stop the simulation of Window Resize after the animations are completed
+setTimeout(function() {
+clearInterval(simulateWindowResize);
+}, 1000);
+
+});
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+ $('.datepicker').pickadate();
+ $('.mdb-select').material_select();
+});
+</script>
+</body>
+
+</html>
