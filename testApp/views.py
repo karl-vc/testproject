@@ -34,7 +34,7 @@ def login(request):
 
                                 if company_data.password_updated:
                                     print(password)
-                                    return HttpResponse('password is decrypted')
+                                    return render(request,'all-project.html')
 
 
                             except:
