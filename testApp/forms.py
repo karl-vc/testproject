@@ -31,3 +31,11 @@ class hr_profileForm(forms.ModelForm):
             "hr_mobile",
             "is_active",
         ]
+
+class change_passForm(forms.ModelForm):
+    class Meta:
+        model = company_profile
+        exclude =[
+            "company_userpassword",
+
+        ]

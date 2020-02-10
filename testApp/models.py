@@ -32,6 +32,8 @@ class hr_profile(models.Model):
     hr_email = models.EmailField(max_length=255)
     hr_password = models.CharField(max_length=1000)
     hr_mobile = models.CharField(max_length=15, default="")
+    hr_emp_id = models.CharField(
+        max_length=1000, unique=True, primary_key=True, default="")
     is_active = models.BooleanField(default=False)
 
     def __str__(self):
@@ -47,6 +49,8 @@ class emp_profile(models.Model):
     emp_email = models.EmailField(max_length=255, default="")
     emp_password = models.CharField(max_length=1000)
     emp_mobile = models.CharField(max_length=10,default="")
+    emp_id = models.CharField(
+        max_length=1000, primary_key=True, unique=True, default="")
 
     def __str__(self):
         return self.emp_email
